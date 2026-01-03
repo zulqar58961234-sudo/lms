@@ -2,7 +2,9 @@ import Link from "next/link";
 
 export default function LandPage() {
   return (
-    <section className="min-h-screen w-full overflow-x-hidden relative">
+    <main>
+      <title>Skill Verge</title>
+      <section className="min-h-screen w-full overflow-x-hidden relative">
       {/* Background Image */}
       <img
         src="/hj.jpg"
@@ -37,7 +39,7 @@ export default function LandPage() {
           </p>
 
           <Link
-            href="/signup"
+            href="/login"
             className="bg-red-500 lg:ml-20 rounded-3xl px-6 py-3 text-white font-bold inline-block mt-8 hover:bg-yellow-500 duration-300"
           >
             Get Started
@@ -55,5 +57,6 @@ export default function LandPage() {
 
       </div>
     </section>
+    </main>
   );
 }

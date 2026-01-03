@@ -1,5 +1,6 @@
 "use client";
-
+import { useRouter } from "next/navigation";
+import { EnrollJs } from "../actions/Enroll";
 import { useState } from "react";
 
 
@@ -9,45 +10,18 @@ const[name,Setname] = useState("")
 const[age,Setage] = useState("")
 const[course,Setcourse] = useState("")
 const[message,Setmessage] = useState("")
-const[image,Setimage] = useState("")
-
-
+const router = useRouter()
 async function HandleSubmit(e){
     e.preventDefault();
-    if(!image){
-      Setmessage("select image file")
-      return;
-    }
-    try {
-  const formData = new FormData();
-  formData.append("file", image);
-  formData.append("upload_preset", "zulqar456");
-  formData.append("cloud_name", "dawuimtir");
-
-  const response = await fetch("https://api.cloudinary.com/v1_1/dawuimtir/image/upload", {
-    method: "POST",
-    body: formData,
-  });
-
-  const result = await response.json();
-
-  if (!result.secure_url) {
-    Setmessage("error in image handling");
-  }
-
-  const res = await CreateData({
-    name,
-    age,
+  const res = await EnrollJs({
     course,
-    image: result.secure_url,
+    age,
   });
 
   Setmessage(res.error || res.success);
-  router.push("/dashboard")
-} catch (error) {
-  console.error(error);
-}
-
+  }  
+  if(course === "Graphic Designing"){
+    router.push("/dashboard")
   }
   return (
       
@@ -66,16 +40,7 @@ async function HandleSubmit(e){
             Enter Your Details
           </h2>
           <form onSubmit={HandleSubmit} className="space-y-6">
-            <div className="flex flex-col items-center mb-5">
-          <label className="text-gray-300 text-sm text">
-            Image  </label>
-            <input onChange={(e)=>Setimage(e.target.files[0])}
-              type="file"
-              accept="image/*"
-              className="w-full p-3 rounded-md text-black shadow-lg shadow-gray-300 border-[1px] border-gray-200"
-            />
-         
-          
+            <div className="flex flex-col items-center mb-5">          
         </div>
             <div className="flex space-x-4">
               <input onChange={(e) => Setname(e.target.value)}

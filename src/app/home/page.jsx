@@ -1,12 +1,16 @@
-"use client";
+
 import "font-awesome/css/font-awesome.min.css";
-import { useEffect } from "react";
 import Link from "next/link";
 import FooterSec from "../components/footer";
 import NavBar from "../components/Navbar";
+import getSession from "../actions/session";
+import { redirect } from "next/navigation";
 
-export default function Homepage() {
 
+export default async function Homepage() {
+const session = await getSession();
+if(!session?.id)
+  { redirect("/login")}
   return (
 <section className="overflow-x-hidden scroll-smooth">
   <title>Home - Skill Verge</title>
@@ -163,17 +167,17 @@ export default function Homepage() {
           <img className="h-[60px] w-[60px] rounded-full object-cover mt-3 ml-2 duration-300 hover:brightness-70" src="r.jpg" alt="" />
           <p className="mt-8 text-sm ml-3 font-semibold">Ellie Clark</p>
         </div>
-        <p className="text-xl font-semibold mt-3 ml-4">Learn HTML for begginers</p>
-        <div className="mt-12 ml-5 flex font-semibold">
+        <p className="text-xl font-semibold  ml-4">Basis Of HTML For begginers</p>
+        <div className="mt-10 ml-5 flex font-semibold">
           <div className="flex flex-row gap-2 items-center">
             <i className="fa-solid fa-user"></i>
-            <p>48</p>
+            <p>80</p>
           </div>
           <div className="flex flex-row gap-2 ml-5 items-center">
             <i className="fa-regular fa-star"></i>
-            <p>3</p>
+            <p>4.67</p>
           </div>
-          <p className="ml-35 text-red-600">Free</p>
+          <Link href="detail" className="ml-14 bg-red-600 hover:bg-gray-600 duration-400 rounded-lg px-5 py-2 text-white">Explore</Link> 
         </div>
       </div>
 
@@ -184,8 +188,8 @@ export default function Homepage() {
           <img className="h-[60px] w-[60px] rounded-full object-cover mt-3 ml-2 duration-300 hover:brightness-70" src="bbb.jpg" alt="" />
           <p className="mt-8 text-sm ml-3 font-semibold">James Hunt</p>
         </div>
-        <p className="text-xl font-semibold mt-3 ml-4">Learn JAVA SCRIPT for begginers</p>
-        <div className="mt-5 ml-5 flex font-semibold">
+        <p className="text-xl font-semibold ml-2">Learn Java Script for <span className="ml-3">begginers</span></p>
+        <div className="mt-3 ml-5 flex font-semibold">
           <div className="flex flex-row gap-2 items-center">
             <i className="fa-solid fa-user"></i>
             <p>48</p>
@@ -194,7 +198,7 @@ export default function Homepage() {
             <i className="fa-regular fa-star"></i>
             <p>3</p>
           </div>
-          <p className="ml-35 text-red-600">Free</p>
+          <Link href="detail2" className="ml-20 bg-red-600 hover:bg-gray-600 duration-400 rounded-lg px-5 py-2 text-white">Explore</Link> 
         </div>
       </div>
     </div>
@@ -208,8 +212,8 @@ export default function Homepage() {
           <img className="h-[60px] w-[60px] rounded-full object-cover mt-3 ml-2 duration-300 hover:brightness-70" src="bb.jpg" alt="" />
           <p className="mt-8 text-sm ml-3 font-semibold">Micheal</p>
         </div>
-        <p className="text-xl font-semibold mt-3 ml-4">Learn HTML for begginers</p>
-        <div className="mt-12 ml-5 flex font-semibold">
+        <p className="text-xl font-semibold ml-4 hover:text-red-600 duration-500">Learn HTML for begginers</p>
+        <div className="mt-10 ml-5 flex font-semibold">
           <div className="flex flex-row gap-2 items-center">
             <i className="fa-solid fa-user"></i>
             <p>48</p>
@@ -218,7 +222,7 @@ export default function Homepage() {
             <i className="fa-regular fa-star"></i>
             <p>3</p>
           </div>
-          <p className="ml-35 text-red-600">Free</p>
+          <Link href="detail3" className="ml-20 bg-red-600 hover:bg-gray-600 duration-400 rounded-lg px-5 py-2 text-white">Explore</Link>
         </div>
       </div>
 
@@ -226,11 +230,11 @@ export default function Homepage() {
       <div className="bg-white h-[340px] w-[300px] cursor-pointer rounded-2xl shadow-md resize-none opacity-90 duration-300 hover:opacity-100">
         <img className="rounded-2xl h-[150px] rounded-b-md brightness-80 w-full object-cover" src="v.jpg" alt="" />
         <div className="flex flex-row">
-          <img className="h-[60px] w-[60px] rounded-full object-cover mt-3 ml-2 duration-300 hover:brightness-70" src="mmm.jpg" alt="" />
+          <img className="h-[60px] w-[60px] rounded-full object-cover ml-2 duration-300 hover:brightness-70" src="mmm.jpg" alt="" />
           <p className="mt-8 text-sm ml-3 font-semibold">Caroline</p>
         </div>
-        <p className="text-xl font-semibold mt-3 ml-4">Learn HTML for begginers</p>
-        <div className="mt-12 ml-5 flex font-semibold">
+        <p className="text-xl font-semibold mt-3 ml-4 hover:text-red-600 duration-500">Learn HTML for begginers</p>
+        <div className="mt-10 ml-5 flex font-semibold">
           <div className="flex flex-row gap-2 items-center">
             <i className="fa-solid fa-user"></i>
             <p>48</p>
@@ -239,7 +243,7 @@ export default function Homepage() {
             <i className="fa-regular fa-star"></i>
             <p>3</p>
           </div>
-          <p className="ml-35 text-red-600">Free</p>
+         <Link href="" className="ml-20 bg-red-600 hover:bg-gray-600 duration-400 rounded-lg px-5 py-2 text-white">Explore</Link>
         </div>
       </div>
     </div>

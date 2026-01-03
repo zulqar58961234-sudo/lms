@@ -1,23 +1,23 @@
 "use server"
 import prisma from "@/lib/db";
 
-export async function SignJs({name , email , password}){
+
+export default async function SignUp({name , email , password}){
     if(!name || !email || !password){
-        return (error,"⚠️Fill All The Credentials")
+        return {error:"Fill all the credentials"}
     }
     try{
-        await prisma.User.create({
-            data : {
-                name, 
+        await prisma.user.create({
+            data: {
+                name,
                 email,
                 password
             }
         });
-        return{success:"✔️Data Saved Successfully"}
+        return {success:"data stored successfully.now you can login to your account"}
     }
     catch(error){
-        console.error("⚠️Something Went Wrong",error)
-        return {error:"❌Data Storing Failed"}
+        console.error("something went wrong",error)
+        return {error: "error while storing data"}
     }
-    
 }

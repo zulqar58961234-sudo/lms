@@ -54,44 +54,27 @@ export default function CoursesPage(){
       {/* 1st */}
       <div className="bg-white h-[340px] w-[300px] cursor-pointer opacity-90 duration-300 hover:opacity-100 rounded-2xl shadow-md resize-none">
         <img className="rounded-2xl h-[150px] rounded-b-md brightness-80 w-full object-cover" src="t.jpg" alt="" />
-        <div className="flex flex-row">
-          <img className="h-[60px] w-[60px] rounded-full object-cover mt-3 ml-2 duration-300 hover:brightness-70" src="r.jpg" alt="" />
-          <p className="mt-8 text-sm ml-3 font-semibold">Ellie Clark</p>
-        </div>
-        <p className="text-xl font-semibold mt-3 ml-4">Learn HTML for begginers</p>
-        <div className="mt-12 ml-5 flex font-semibold">
-          <div className="flex flex-row gap-2 items-center">
-            <i className="fa-solid fa-user"></i>
-            <p>48</p>
-          </div>
-          <div className="flex flex-row gap-2 ml-5 items-center">
-            <i className="fa-regular fa-star"></i>
-            <p>3</p>
-          </div>
-          <p className="ml-35 text-red-600">Free</p>
-        </div>
+        <p className="text-xl font-bold mt-4 ml-4">Learn Basic HTML for begginers</p>
+       <div className="text-sm text-gray-800 ml-4 mt-3">
+ <p><i className="fa-solid fa-check text-black font-bold"></i> Learn the basics of HTML from scratch</p>
+         <p><i className="fa-solid fa-check text-black font-bold"></i> Understand the structure of a web page</p>
+          <p><i className="fa-solid fa-check text-black font-bold"></i> Learn how to use HTML tags and elements</p>
+       </div>
+ <Link className="text-black font-semibold flex rounded-lg bg-gray-300 p-2 h-[40px] w-[100px] ml-47" href="" >Learn More</Link>
       </div>
 
       {/* 2nd */}
       <div className="bg-white h-[340px] w-[300px] cursor-pointer rounded-2xl shadow-md resize-none opacity-90 duration-300 hover:opacity-100">
         <img className="rounded-2xl h-[150px] rounded-b-md brightness-80 w-full object-cover" src="z.jpg" alt="" />
-        <div className="flex flex-row">
-          <img className="h-[60px] w-[60px] rounded-full object-cover mt-3 ml-2 duration-300 hover:brightness-70" src="bbb.jpg" alt="" />
-          <p className="mt-8 text-sm ml-3 font-semibold">James Hunt</p>
-        </div>
         <p className="text-xl font-semibold mt-3 ml-4">Learn JAVA SCRIPT for begginers</p>
-        <div className="mt-5 ml-5 flex font-semibold">
-          <div className="flex flex-row gap-2 items-center">
-            <i className="fa-solid fa-user"></i>
-            <p>48</p>
-          </div>
-          <div className="flex flex-row gap-2 ml-5 items-center">
-            <i className="fa-regular fa-star"></i>
-            <p>3</p>
-          </div>
-          <p className="ml-35 text-red-600">Free</p>
-        </div>
-      </div>
+     
+       <div className="text-sm text-gray-800 ml-4 mt-3">
+ <p><i className="fa-solid fa-check text-black font-bold"></i> Learn JavaScript basics from scratch</p>
+         <p><i className="fa-solid fa-check text-black font-bold"></i> Learn variables, functions, and conditions</p>
+          <p><i className="fa-solid fa-check text-black font-bold"></i> Build simple and interactive projects</p>
+       </div>
+       <Link className="text-black font-semibold flex rounded-lg bg-gray-300 p-2 h-[40px] w-[100px] ml-47" href="" >Learn More</Link>
+       </div>
     </div>
 
     {/* LOWER SECTION */}
@@ -99,43 +82,26 @@ export default function CoursesPage(){
       {/* 3rd */}
       <div className="bg-white h-[340px] w-[300px] cursor-pointer rounded-2xl shadow-md resize-none opacity-90 duration-300 hover:opacity-100">
         <img className="rounded-2xl h-[150px] rounded-b-md brightness-80 w-full object-cover" src="tt.jpg" alt="" />
-        <div className="flex flex-row">
-          <img className="h-[60px] w-[60px] rounded-full object-cover mt-3 ml-2 duration-300 hover:brightness-70" src="bb.jpg" alt="" />
-          <p className="mt-8 text-sm ml-3 font-semibold">Micheal</p>
-        </div>
-        <p className="text-xl font-semibold mt-3 ml-4">Learn HTML for begginers</p>
-        <div className="mt-12 ml-5 flex font-semibold">
-          <div className="flex flex-row gap-2 items-center">
-            <i className="fa-solid fa-user"></i>
-            <p>48</p>
-          </div>
-          <div className="flex flex-row gap-2 ml-5 items-center">
-            <i className="fa-regular fa-star"></i>
-            <p>3</p>
-          </div>
-          <p className="ml-35 text-red-600">Free</p>
-        </div>
+        <p className="text-xl font-semibold mt-3 ml-4">Learn Basics of Digital Marketing</p>
+        <div className="text-sm text-gray-800 ml-4 mt-3">
+ <p><i className="fa-solid fa-check text-black font-bold"></i> Understand how online marketing works</p>
+         <p><i className="fa-solid fa-check text-black font-bold"></i> Learn SEO, and content marketing</p>
+          <p><i className="fa-solid fa-check text-black font-bold"></i> Promote products and services online</p>
+       </div>
+       <Link className="text-black font-semibold flex rounded-lg bg-gray-300 p-2 h-[40px] w-[100px] ml-47 duration-300 hover:bg-gray-600" href="" >Learn More</Link>
       </div>
 
       {/* 4th */}
       <div className="bg-white h-[340px] w-[300px] cursor-pointer rounded-2xl shadow-md resize-none opacity-90 duration-300 hover:opacity-100">
         <img className="rounded-2xl h-[150px] rounded-b-md brightness-80 w-full object-cover" src="v.jpg" alt="" />
-        <div className="flex flex-row">
-          <img className="h-[60px] w-[60px] rounded-full object-cover mt-3 ml-2 duration-300 hover:brightness-70" src="mmm.jpg" alt="" />
-          <p className="mt-8 text-sm ml-3 font-semibold">Caroline</p>
-        </div>
-        <p className="text-xl font-semibold mt-3 ml-4">Learn HTML for begginers</p>
-        <div className="mt-12 ml-5 flex font-semibold">
-          <div className="flex flex-row gap-2 items-center">
-            <i className="fa-solid fa-user"></i>
-            <p>48</p>
-          </div>
-          <div className="flex flex-row gap-2 ml-5 items-center">
-            <i className="fa-regular fa-star"></i>
-            <p>3</p>
-          </div>
-          <p className="ml-35 text-red-600">Free</p>
-        </div>
+  
+        <p className="text-xl font-semibold mt-3 ml-4">Learn Freelancing for Beginners</p>
+         <div className="text-sm text-gray-800 ml-4 mt-3">
+ <p><i className="fa-solid fa-check text-black font-bold"></i> Start earning online with your skills</p>
+         <p><i className="fa-solid fa-check text-black font-bold"></i> Find clients and projects online</p>
+          <p><i className="fa-solid fa-check text-black font-bold"></i> No prior experience required</p>
+       </div>
+       <Link className="text-black font-semibold flex rounded-lg bg-gray-300 p-2 h-[40px] w-[100px] ml-47" href="" >Learn More</Link>
       </div>
     </div>
   </div>

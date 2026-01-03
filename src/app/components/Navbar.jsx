@@ -1,10 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 export default function NavBar() {
+   useEffect(() => {
+           
+           // Highlight active nav link
+           const currentLocation = window.location.href;
+           const links = document.querySelectorAll(".nav-link");
+           links.forEach((link) => {
+           if (link.href === currentLocation) {
+           link.classList.add("text-red-500");
+           } else {
+           link.classList.remove("text-red-500");
+           }
+           })
+           })
   const [open, setOpen] = useState(false);
 
   return (
@@ -20,13 +33,15 @@ export default function NavBar() {
       {/* Desktop Menu */}
       <div className="hidden md:flex space-x-6 text-md font-semibold mr-10 items-center">
 
-        <Link href="/home" className="nav-link transition-transform duration-400 hover:scale-110">Home</Link>
+        <div className="space-x-6 flex">
+          <Link href="/home" className="nav-link transition-transform duration-400 hover:scale-110">Home</Link>
         <Link href="/about" className="nav-link transition-transform duration-400 hover:scale-110">About</Link>
         <Link href="/courses" className="nav-link transition-transform duration-400 hover:scale-110">Courses</Link>
         <Link href="/team" className="nav-link transition-transform duration-400 hover:scale-110">Team</Link>
         <Link href="/contact" className="nav-link transition-transform duration-400 hover:scale-110">Contact</Link>
+        </div>
 
-        <a href="/join" className="join-btn text-white bg-red-600 rounded-lg px-4 py-2 duration-300 hover:bg-gray-600">
+        <a href="/join" className="join-btn ml-70 text-white bg-red-600 rounded-lg px-4 py-2 duration-300 hover:bg-gray-600">
           Enroll Now
         </a>
       </div>

@@ -9,22 +9,34 @@ export default async function LogIn({email , password}) {
     if(!email || !password){
         return {error:"Fill all the credentianls"}
     }
-    const User = await prisma.user.findUnique({
-        where:{email}
+    const user = await prisma.user.findUnique({
+        where:{email},
+       include:{
+        studentinfo: true
+       }
     })
-    if(!User){
+    if(!user){
         return {error:"User not found"}
     }
-    if (User.password !== password){
+    if (user.password !== password){
         return {error: "wrong password"}
     }
     const SECRET = "my-key"
-    const Token = Jwt.sign({id:User.id, email:User.email}, SECRET)
+    const token = Jwt.sign({id:user.id, email:user.email}, SECRET)
     
-    cookies().set("Auth", Token, {
+    cookies().set("Auth", token, {
         httpOnly:true,
         secure:true,
         path:"/"
     })
-      return {success:"login successfully"}
+      if(user.studentinfo){
+     const course = user.studentinfo.course
+     if(course){
+        redirect("/dahboard")
+     }
+      } else{
+        redirect("/home")
+      }
+      
+
 }

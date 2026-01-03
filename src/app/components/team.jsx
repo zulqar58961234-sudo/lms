@@ -36,9 +36,9 @@ const teamMembers = [
     category: "Designers",
   },
   {
-    name: "Humaira Asghar (Marhoom)",
+    name: "Ahmed Khan",
     role: "Digital Marketer",
-    img: "/team5.png",
+    img: "/bb.jpg",
     category: "Marketing & Sales",
   },
   {

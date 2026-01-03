@@ -1,5 +1,4 @@
 "use client"
-
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { useState } from "react";
@@ -29,7 +28,10 @@ async function HandleSubmit(e) {
 }
 
     return(
-     <section className="min-h-screen w-full overflow-x-hidden relative">
+     
+    <main>
+  <title>Login - Skill Verge</title>
+       <section className="min-h-screen w-full overflow-x-hidden relative">
 
      {/* BACKGROUND */}
      <img
@@ -158,5 +160,6 @@ async function HandleSubmit(e) {
        </div>
      </div>          
 </section>
+    </main>
     )
 }

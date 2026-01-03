@@ -27,7 +27,7 @@ useEffect(() => {
       link.classList.remove(
         "bg-gradient-to-l",
 "from-red-400",
-"to-red-600"
+"to-black-00"
       );
     }
   });

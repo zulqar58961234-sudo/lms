@@ -2,8 +2,8 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { useState } from "react";
-import { SignJs } from "../actions/signup";
 import { redirect } from "next/navigation";
+import SignUp from "../actions/signup";
 
 export default function SignUpPage() {
   const [name, Setname] = useState("");
@@ -16,7 +16,7 @@ export default function SignUpPage() {
     e.preventDefault();
     Setloading(true);
 
-    const res = await SignJs({ name, email, password });
+    const res = await SignUp({ name, email, password });
     Setmessage(res.error || res.success);
     Setloading(false);
     Setname("");
@@ -27,7 +27,9 @@ export default function SignUpPage() {
   }
 
   return (
-    <section className="min-h-screen w-full overflow-x-hidden relative">
+    <main>
+      <title>SignUp - Skill Verge</title>
+      <section className="min-h-screen w-full overflow-x-hidden relative">
       {/* BG IMAGE */}
       <img
         src="/hj.jpg"
@@ -173,5 +175,6 @@ export default function SignUpPage() {
 
       </div>
     </section>
+    </main>
   );
 }
