@@ -32,7 +32,7 @@ export default async function LogIn({email , password}) {
       if(user.studentinfo){
      const course = user.studentinfo.course
      if(course){
-        redirect("/dahboard")
+        redirect("/dashboard")
      }
       } else{
         redirect("/home")

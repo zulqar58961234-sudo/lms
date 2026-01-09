@@ -7,10 +7,11 @@ import getSession from "../actions/session";
 import { redirect } from "next/navigation";
 
 
+
 export default async function Homepage() {
-const session = await getSession();
+ const session = await getSession();
 if(!session?.id)
-  { redirect("/login")}
+   redirect("/login")
   return (
 <section className="overflow-x-hidden scroll-smooth">
   <title>Home - Skill Verge</title>

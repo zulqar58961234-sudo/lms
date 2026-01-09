@@ -1,78 +1,173 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import {
+  Menu,
+  X,
+  User,
+  LayoutDashboard,
+  Settings,
+  LogOut as LogoutIcon,
+} from "lucide-react";
+import LogOut from "../actions/logout";
 
 export default function NavBar() {
-   useEffect(() => {
-           
-           // Highlight active nav link
-           const currentLocation = window.location.href;
-           const links = document.querySelectorAll(".nav-link");
-           links.forEach((link) => {
-           if (link.href === currentLocation) {
-           link.classList.add("text-red-500");
-           } else {
-           link.classList.remove("text-red-500");
-           }
-           })
-           })
   const [open, setOpen] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
+  const pathname = usePathname();
+
+  const linkClass = (path) =>
+    `nav-link ${
+      pathname === path ? "text-red-500" : "text-gray-800"
+    } hover:text-red-500 transition`;
 
   return (
-    <nav className="bg-white fixed h-[60px] w-screen z-60 flex items-center justify-between font-serif shadow">
-      
+    <nav className="fixed z-50 flex h-[60px] w-screen items-center bg-white px-6 font-serif shadow">
+
       {/* Logo */}
-      <p className="text-4xl font-bold text-red-600 ml-6 md:ml-10">
+      <p className="text-4xl font-bold text-red-600">
         S<span className="text-xl text-black">KILL</span> V
         <span className="text-xl text-black">ERGE</span>
         <span className="text-yellow-400">*</span>
       </p>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex space-x-6 text-md font-semibold mr-10 items-center">
+      <div className="hidden md:flex flex-1 items-center justify-between">
 
-        <div className="space-x-6 flex">
-          <Link href="/home" className="nav-link transition-transform duration-400 hover:scale-110">Home</Link>
-        <Link href="/about" className="nav-link transition-transform duration-400 hover:scale-110">About</Link>
-        <Link href="/courses" className="nav-link transition-transform duration-400 hover:scale-110">Courses</Link>
-        <Link href="/team" className="nav-link transition-transform duration-400 hover:scale-110">Team</Link>
-        <Link href="/contact" className="nav-link transition-transform duration-400 hover:scale-110">Contact</Link>
+        {/* Center Links */}
+        <div className="flex flex-1 justify-center space-x-6 text-md font-semibold">
+          <Link href="/home" className={linkClass("/home")}>Home</Link>
+          <Link href="/about" className={linkClass("/about")}>About</Link>
+          <Link href="/courses" className={linkClass("/courses")}>Courses</Link>
+          <Link href="/team" className={linkClass("/team")}>Team</Link>
+          <Link href="/contact" className={linkClass("/contact")}>Contact</Link>
         </div>
 
-        <a href="/join" className="join-btn ml-70 text-white bg-red-600 rounded-lg px-4 py-2 duration-300 hover:bg-gray-600">
-          Enroll Now
-        </a>
-      </div>
+        {/* Right Buttons */}
+        <div className="flex items-center gap-3">
 
-      {/* Mobile Hamburger Button */}
-      <button
-        className="md:hidden mr-6"
-        onClick={() => setOpen(!open)}
-      >
-        {open ? <X size={28} /> : <Menu size={28} />}
-      </button>
-
-      {/* Mobile Menu */}
-      {open && (
-        <div className="absolute top-[60px] left-0 w-full bg-white shadow-md flex flex-col items-start py-4 px-6 space-y-4 md:hidden">
-
-          <Link href="/home" onClick={() => setOpen(false)} className="text-lg font-semibold">Home</Link>
-          <Link href="/about" onClick={() => setOpen(false)} className="text-lg font-semibold">About</Link>
-          <Link href="/courses" onClick={() => setOpen(false)} className="text-lg font-semibold">Courses</Link>
-          <Link href="/team" onClick={() => setOpen(false)} className="text-lg font-semibold">Team</Link>
-          <Link href="/contact" onClick={() => setOpen(false)} className="text-lg font-semibold">Contact</Link>
-
-          <a
+          {/* Enroll Button */}
+          <Link
             href="/join"
-            onClick={() => setOpen(false)}
-            className="text-white bg-red-600 rounded-lg px-4 py-2 duration-300 hover:bg-gray-600 w-full text-center"
+            className="
+              group flex items-center gap-2 rounded-full
+              border border-red-600
+              bg-white px-4 py-2
+              text-sm font-semibold text-red-600
+              shadow-sm
+              transition-all duration-300
+              hover:bg-red-600 hover:text-white
+              hover:shadow-md hover:-translate-y-[1px]
+            "
           >
             Enroll Now
-          </a>
+          </Link>
+
+          {/* Profile Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setProfileOpen(!profileOpen)}
+              className="
+                group flex items-center gap-2 rounded-full
+              border border-red-600
+              bg-white px-4 py-2
+              text-sm font-semibold text-red-600
+              shadow-sm
+              transition-all duration-300
+              hover:bg-red-600 hover:text-white
+              hover:shadow-md hover:-translate-y-[1px]
+              "
+            >
+              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20 ring-1 ring-white/40">
+                <User size={16} />
+              </span>
+              <span className="text-sm">Profile</span>
+              <svg
+                className={`h-4 w-4 opacity-70 transition-transform duration-300 ${
+                  profileOpen ? "rotate-180" : ""
+                }`}
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {/* Animated Dropdown */}
+            <div
+              className={`
+                absolute right-0 mt-4 w-64 origin-top-right
+                overflow-hidden rounded-2xl bg-white
+                shadow-2xl ring-1 ring-black/10
+                transform transition-all duration-300 ease-out
+                ${
+                  profileOpen
+                    ? "scale-100 opacity-100 translate-y-0 pointer-events-auto"
+                    : "scale-95 opacity-0 -translate-y-2 pointer-events-none"
+                }
+              `}
+            >
+              {/* Header */}
+              <div className="bg-gradient-to-r from-gray-600 to-gray-400 px-4 py-4 text-white">
+                <p className="text-sm font-semibold">Welcome 👋</p>
+                <p className="text-xs opacity-90">Manage your account</p>
+              </div>
+
+              {/* Menu */}
+              <div className="py-2">
+                <Link
+                  href="/dashboard"
+                  onClick={() => setProfileOpen(false)}
+                  className="group flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100"
+                >
+                  <span className="rounded-lg bg-red-50 p-2 text-red-600 group-hover:bg-red-100">
+                    <LayoutDashboard size={16} />
+                  </span>
+                  Dashboard
+                </Link>
+
+                <Link
+                  href="/edit-profile"
+                  onClick={() => setProfileOpen(false)}
+                  className="group flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100"
+                >
+                  <span className="rounded-lg bg-red-50 p-2 text-red-600 group-hover:bg-red-100">
+                    <Settings size={16} />
+                  </span>
+                  Edit Profile
+                </Link>
+              </div>
+
+              {/* Logout */}
+              <div className="border-t px-4 py-3">
+                <button
+                  onClick={async () => await LogOut()}
+                  className="
+                    flex w-full items-center justify-center gap-2
+                    rounded-xl border border-red-200
+                    bg-red-50 py-2.5 text-sm font-semibold text-red-600
+                    transition-all duration-300
+                    hover:bg-red-600 hover:text-white
+                    active:scale-[0.96]
+                  "
+                >
+                  <LogoutIcon size={16} />
+                  Logout
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      )}
+      </div>
+
+      {/* Mobile Hamburger */}
+      <button className="ml-auto md:hidden" onClick={() => setOpen(!open)}>
+        {open ? <X size={28} /> : <Menu size={28} />}
+      </button>
     </nav>
   );
 }

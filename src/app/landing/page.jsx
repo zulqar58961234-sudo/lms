@@ -1,6 +1,11 @@
+
 import Link from "next/link";
 
+
+
 export default function LandPage() {
+ 
+
   return (
     <main>
       <title>Skill Verge</title>
@@ -59,4 +64,4 @@ export default function LandPage() {
     </section>
     </main>
   );
-}
+  }
