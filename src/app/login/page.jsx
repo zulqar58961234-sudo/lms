@@ -16,7 +16,7 @@ const router = useRouter();
 
 async function HandleSubmit(e) {
   e.preventDefault();
-  Setloading(true)
+  Setloading(true) 
   const res = await LogIn({email , password})
   Setmessage(res . error || res . success)
   Setloading(false)

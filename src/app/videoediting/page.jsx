@@ -1,56 +1,53 @@
-"use client";
+ "use client";
 import React from "react";
 import Link from "next/link";
 import NavBar from "../components/Navbar";
 import ParticlesBackground from "../components/ParticlesBackground";
 import EndCourse from "../components/deletecourse";
-import Footer from "../components/footer";
 
-export default function GraphicDesigningCourse() {
-
+export default function VideoEditingCourse() {
   const lessons = [
-  {
-    title: "Introduction to Graphic Designing",
-    url: "https://www.youtube.com/embed/GQS7wPujL2k",
-  },
-  {
-    title: "Principles of Design (Color, Typography, Layout)",
-    url: "https://www.youtube.com/embed/SGT1l9AukLc",
-  },
-  {
-    title: "Adobe Photoshop Basics",
-    url: "https://www.youtube.com/embed/xTzvQkOll2U",
-  },
-  {
-    title: "Adobe Illustrator Basics",
-    url: "https://www.youtube.com/embed/r9gaPGQ1EG0",
-  },
-  {
-    title: "Logo & Brand Identity Design",
-    url: "https://www.youtube.com/embed/6jQxI06lM4k",
-  },
-  {
-    title: "Project: Design a Professional Brand Kit",
-    url: "https://www.youtube.com/embed/y_2P5o_msuo",
-  },
-];
-
+    {
+      title: "CapCut Tutorial for Beginners (2026)",
+      url: "https://www.youtube.com/embed/EMDrgqepVhM",
+    },
+    {
+      title: "CapCut Video Editing Guide (Easy & Free)",
+      url: "https://www.youtube.com/embed/j5_471mO14c",
+    },
+    {
+      title: "Premiere Pro Tutorial for Beginners (Full Course)",
+      url: "https://www.youtube.com/embed/xDq3ij-oHJA",
+    },
+    {
+      title: "How to Start Video Editing from ZERO",
+      url: "https://www.youtube.com/embed/g9G218IncLw",
+    },
+    {
+      title: "Premiere Pro Basics (Step-by-Step)",
+      url: "https://www.youtube.com/embed/IvwRsNroSww",
+    },
+    {
+      title: "Free Premiere Pro Beginners Guide",
+      url: "https://www.youtube.com/embed/T4T4i_IEuUk",
+    },
+  ];
 
   return (
     <section className="min-h-screen bg-gray-50 text-gray-900">
-      <title>Graphic Designing Course - Skill Verge</title>
+      <title>Video Editing Course - Skill Verge</title>
 
       {/* Header */}
       <NavBar />
 
       {/* Hero Section */}
       <div className="relative h-[500px] flex items-center justify-center text-center overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/graphic.jpg')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-[url('/video.jpg')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-black/70"></div>
         <ParticlesBackground />
         <div className="relative z-10 text-white">
           <h1 className="text-5xl font-extrabold tracking-wide">
-            Graphic Designing Course
+            Video Editing Course
           </h1>
           <p className="mt-3 text-sm opacity-90">
             <Link href="/home">Home</Link> / Course
@@ -76,12 +73,12 @@ export default function GraphicDesigningCourse() {
             Course Overview
           </h2>
           <p className="text-lg leading-relaxed text-gray-700">
-            This Graphic Designing course is ideal for beginners who want to
-            build strong creative skills and enter the design industry.
-            You will learn design principles, color theory, typography,
-            and professional tools like Adobe Photoshop and Illustrator.
-            By the end of this course, you will be able to design logos,
-            social media posts, posters, and complete brand identities.
+            This Video Editing course uses real beginner-friendly tutorials
+            from YouTube to teach you editing basics — from free tools like
+            CapCut to professional tools like Adobe Premiere Pro. You'll
+            learn editing workflow, trimming, transitions, audio editing,
+            and how to build quality videos for YouTube, social media,
+            and more.:contentReference[oaicite:1]{index=1}
           </p>
         </div>
 
@@ -91,11 +88,11 @@ export default function GraphicDesigningCourse() {
             Scope <span className="text-yellow-500">&</span> Career Opportunities
           </h2>
           <ul className="list-disc ml-6 space-y-2 text-lg text-gray-700">
-            <li>Graphic Designer (Digital & Print)</li>
-            <li>Logo & Brand Identity Designer</li>
-            <li>Social Media & Marketing Designer</li>
-            <li>Freelancing on Fiverr & Upwork</li>
-            <li>Creative career in media & tech industry</li>
+            <li>Video Editor for YouTube, Reels, TikTok & Social Media</li>
+            <li>Freelance Video Editing (Fiverr, Upwork, etc.)</li>
+            <li>Content Creator & Filmmaker</li>
+            <li>Media/Marketing Agencies</li>
+            <li>Editing Work for Brands & Businesses</li>
           </ul>
         </div>
 
@@ -133,8 +130,8 @@ export default function GraphicDesigningCourse() {
       </div>
 
       {/* Footer */}
-      <footer className="pt-10">
-        <Footer/>
+      <footer className="bg-gray-900 text-white py-8 text-center">
+        <p>© 2026 Skill Verge. All rights reserved.</p>
       </footer>
     </section>
   );

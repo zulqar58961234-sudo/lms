@@ -37,7 +37,7 @@ export default function NavBar() {
       <div className="hidden md:flex flex-1 items-center justify-between">
 
         {/* Center Links */}
-        <div className="flex flex-1 justify-center space-x-6 text-md font-semibold">
+        <div className="flex flex-1 justify-center space-x-6 ml-10 text-md font-semibold">
           <Link href="/home" className={linkClass("/home")}>Home</Link>
           <Link href="/about" className={linkClass("/about")}>About</Link>
           <Link href="/courses" className={linkClass("/courses")}>Courses</Link>
@@ -54,10 +54,10 @@ export default function NavBar() {
             className="
               group flex items-center gap-2 rounded-full
               border border-red-600
-              bg-white px-4 py-2
+              bg-white px-2 py-2
               text-sm font-semibold text-red-600
               shadow-sm
-              transition-all duration-300
+              transition-all duration-400
               hover:bg-red-600 hover:text-white
               hover:shadow-md hover:-translate-y-[1px]
             "
@@ -72,10 +72,10 @@ export default function NavBar() {
               className="
                 group flex items-center gap-2 rounded-full
               border border-red-600
-              bg-white px-4 py-2
+              bg-white px-2 py-2
               text-sm font-semibold text-red-600
-              shadow-sm
-              transition-all duration-300
+              shadow-sm cursor-pointer
+              transition-all duration-400
               hover:bg-red-600 hover:text-white
               hover:shadow-md hover:-translate-y-[1px]
               "
@@ -117,30 +117,35 @@ export default function NavBar() {
                 <p className="text-xs opacity-90">Manage your account</p>
               </div>
 
-              {/* Menu */}
-              <div className="py-2">
-                <Link
-                  href="/dashboard"
-                  onClick={() => setProfileOpen(false)}
-                  className="group flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100"
-                >
-                  <span className="rounded-lg bg-red-50 p-2 text-red-600 group-hover:bg-red-100">
-                    <LayoutDashboard size={16} />
-                  </span>
-                  Dashboard
-                </Link>
+            {/* Menu */}
+<div className="py-2">
 
-                <Link
-                  href="/edit-profile"
-                  onClick={() => setProfileOpen(false)}
-                  className="group flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100"
-                >
-                  <span className="rounded-lg bg-red-50 p-2 text-red-600 group-hover:bg-red-100">
-                    <Settings size={16} />
-                  </span>
-                  Edit Profile
-                </Link>
-              </div>
+  {/* Profile (FIRST & with User icon) */}
+  <Link
+    href="/profile"
+    onClick={() => setProfileOpen(false)}
+    className="group flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100"
+  >
+    <span className="rounded-lg bg-red-50 p-2 text-red-600 group-hover:bg-red-100">
+      <User size={16} />
+    </span>
+    Account
+  </Link>
+
+  {/* Dashboard (SECOND) */}
+  <Link
+    href="/dashboard"
+    onClick={() => setProfileOpen(false)}
+    className="group flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100"
+  >
+    <span className="rounded-lg bg-red-50 p-2 text-red-600 group-hover:bg-red-100">
+      <LayoutDashboard size={16} />
+    </span>
+    Dashboard
+  </Link>
+
+</div>
+
 
               {/* Logout */}
               <div className="border-t px-4 py-3">

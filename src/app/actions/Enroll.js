@@ -2,7 +2,7 @@
 import prisma from "@/lib/db";
 import getSession from "./session";
 
-export async function EnrollJs({ course, age, image }) {
+export async function EnrollJs({name, course, age, image }) {
   const session = await getSession();
   if (!session) {
     return { error: "unauthorized" };
@@ -16,7 +16,7 @@ export async function EnrollJs({ course, age, image }) {
   try {
     await prisma.studentinfo.create({
       data: {
-        userId: session.id,
+        name,
         course,
         image, // ✅ guaranteed string URL
         age: Number(age),
@@ -28,4 +28,7 @@ export async function EnrollJs({ course, age, image }) {
     console.error("⚠️ Something Went Wrong", error);
     return { error: "❌ Data Storing Failed" };
   }
+}
+export async function GetInfo(){
+  await prisma.studentinfo.findMany()
 }

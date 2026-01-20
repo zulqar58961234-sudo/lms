@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaBook, FaLaptopCode, FaChalkboardTeacher, FaHeadset, FaShieldAlt, FaInfoCircle } from "react-icons/fa";
 
 export default function Footer() {
@@ -55,12 +56,13 @@ export default function Footer() {
           {/* QUICK LINKS */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
-            <ul className="space-y-3 text-gray-400 text-sm">
-              <li className="hover:text-white cursor-pointer">All Courses</li>
-              <li className="hover:text-white cursor-pointer">Certificates</li>
-              <li className="hover:text-white cursor-pointer">Learning Paths</li>
-              <li className="hover:text-white cursor-pointer">Workshops</li>
-              <li className="hover:text-white cursor-pointer">Exams & Quizzes</li>
+            <ul className="space-y-2 flex flex-col text-gray-400 text-sm">
+              <Link href="/home" className="hover:text-white cursor-pointer">Home</Link>
+               <Link href="/about" className="hover:text-white cursor-pointer">About</Link>
+                <Link href="/team" className="hover:text-white cursor-pointer">Team</Link>
+                 <Link href="/courses" className="hover:text-white cursor-pointer">Courses</Link>
+                  <Link href="/contact" className="hover:text-white cursor-pointer">Contact</Link>
+              
             </ul>
           </div>
 

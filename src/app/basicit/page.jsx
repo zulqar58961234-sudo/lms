@@ -6,51 +6,50 @@ import ParticlesBackground from "../components/ParticlesBackground";
 import EndCourse from "../components/deletecourse";
 import Footer from "../components/footer";
 
-export default function GraphicDesigningCourse() {
-
+export default function BasicITCourse() {
   const lessons = [
   {
-    title: "Introduction to Graphic Designing",
-    url: "https://www.youtube.com/embed/GQS7wPujL2k",
+    title: "Introduction to Information Technology",
+    url: "https://www.youtube.com/embed/ER2It2mIagI",
   },
   {
-    title: "Principles of Design (Color, Typography, Layout)",
-    url: "https://www.youtube.com/embed/SGT1l9AukLc",
+    title: "Computer Hardware & Software Basics",
+    url: "https://www.youtube.com/embed/9Jp0dG6p0m0",
   },
   {
-    title: "Adobe Photoshop Basics",
-    url: "https://www.youtube.com/embed/xTzvQkOll2U",
+    title: "Operating System Basics (Windows)",
+    url: "https://www.youtube.com/embed/HvU5jFj9l2E",
   },
   {
-    title: "Adobe Illustrator Basics",
-    url: "https://www.youtube.com/embed/r9gaPGQ1EG0",
+    title: "MS Word Basics",
+    url: "https://www.youtube.com/embed/yp8z9u3Yy0E",
   },
   {
-    title: "Logo & Brand Identity Design",
-    url: "https://www.youtube.com/embed/6jQxI06lM4k",
+    title: "MS Excel Basics",
+    url: "https://www.youtube.com/embed/Vl0H-qTclOg",
   },
   {
-    title: "Project: Design a Professional Brand Kit",
-    url: "https://www.youtube.com/embed/y_2P5o_msuo",
+    title: "Internet, Email & Cyber Safety",
+    url: "https://www.youtube.com/embed/yrln8nyVBLU",
   },
 ];
 
 
   return (
     <section className="min-h-screen bg-gray-50 text-gray-900">
-      <title>Graphic Designing Course - Skill Verge</title>
+      <title>Basic IT Course - Skill Verge</title>
 
       {/* Header */}
       <NavBar />
 
       {/* Hero Section */}
       <div className="relative h-[500px] flex items-center justify-center text-center overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/graphic.jpg')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-[url('/it2.webp')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-black/70"></div>
         <ParticlesBackground />
         <div className="relative z-10 text-white">
           <h1 className="text-5xl font-extrabold tracking-wide">
-            Graphic Designing Course
+            Basic IT Course
           </h1>
           <p className="mt-3 text-sm opacity-90">
             <Link href="/home">Home</Link> / Course
@@ -76,12 +75,11 @@ export default function GraphicDesigningCourse() {
             Course Overview
           </h2>
           <p className="text-lg leading-relaxed text-gray-700">
-            This Graphic Designing course is ideal for beginners who want to
-            build strong creative skills and enter the design industry.
-            You will learn design principles, color theory, typography,
-            and professional tools like Adobe Photoshop and Illustrator.
-            By the end of this course, you will be able to design logos,
-            social media posts, posters, and complete brand identities.
+            This Basic IT course is designed for beginners who want to learn
+            essential computer and technology skills. You will understand
+            how computers work, learn common software like MS Word and Excel,
+            explore internet usage, and practice safe online habits.
+            This course builds a strong foundation for further IT and tech studies.
           </p>
         </div>
 
@@ -91,11 +89,11 @@ export default function GraphicDesigningCourse() {
             Scope <span className="text-yellow-500">&</span> Career Opportunities
           </h2>
           <ul className="list-disc ml-6 space-y-2 text-lg text-gray-700">
-            <li>Graphic Designer (Digital & Print)</li>
-            <li>Logo & Brand Identity Designer</li>
-            <li>Social Media & Marketing Designer</li>
-            <li>Freelancing on Fiverr & Upwork</li>
-            <li>Creative career in media & tech industry</li>
+            <li>Computer Operator</li>
+            <li>Office Assistant</li>
+            <li>Data Entry Operator</li>
+            <li>Foundation for Web, Graphic & IT Courses</li>
+            <li>Essential skill for every profession</li>
           </ul>
         </div>
 
@@ -134,7 +132,7 @@ export default function GraphicDesigningCourse() {
 
       {/* Footer */}
       <footer className="pt-10">
-        <Footer/>
+       <Footer/>
       </footer>
     </section>
   );

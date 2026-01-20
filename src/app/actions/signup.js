@@ -1,5 +1,6 @@
 "use server"
 import prisma from "@/lib/db";
+import { redirect } from "next/navigation";
 
 
 export default async function SignUp({name , email , password}){
@@ -14,10 +15,15 @@ export default async function SignUp({name , email , password}){
                 password
             }
         });
-        return {success:"data stored successfully.now you can login to your account"}
+      redirect("/login")
     }
     catch(error){
         console.error("something went wrong",error)
         return {error: "error while storing data"}
     }
+   
 }
+
+ export async function ReadData(){
+        await prisma.user.findMany()
+    }

@@ -47,65 +47,73 @@ export default function CoursesPage(){
 
 {/* COURSES */}
 
-<div className="h-[700px] w-full flex justify-center items-center">
-  <div className="h-[700px] w-[1200px] flex flex-col gap-5 justify-center items-center">
+<div className="h-auto w-full flex justify-center items-center py-10">
+  <div className="w-[1200px] flex flex-col gap-10 justify-center items-center">
+    
     {/* UPPER SECTION */}
-    <div className="flex flex-row gap-20">
-      {/* 1st */}
-      <div className="bg-white h-[340px] w-[300px] cursor-pointer opacity-90 duration-300 hover:opacity-100 rounded-2xl shadow-md resize-none">
-        <img className="rounded-2xl h-[150px] rounded-b-md brightness-80 w-full object-cover" src="t.jpg" alt="" />
-        <p className="text-xl font-bold mt-4 ml-4">Learn Basic HTML for begginers</p>
-       <div className="text-sm text-gray-800 ml-4 mt-3">
- <p><i className="fa-solid fa-check text-black font-bold"></i> Learn the basics of HTML from scratch</p>
-         <p><i className="fa-solid fa-check text-black font-bold"></i> Understand the structure of a web page</p>
-          <p><i className="fa-solid fa-check text-black font-bold"></i> Learn how to use HTML tags and elements</p>
-       </div>
- <Link className="text-black font-semibold flex rounded-lg bg-gray-300 p-2 h-[40px] w-[100px] ml-47" href="" >Learn More</Link>
+    <div className="flex flex-row gap-10 flex-wrap justify-center">
+      {/* 1st Card - Web Development */}
+      <div className="bg-white h-[380px] w-[300px] cursor-pointer opacity-90 duration-300 hover:opacity-100 rounded-2xl shadow-md flex flex-col">
+        <img className="rounded-t-2xl h-[150px] w-full object-cover brightness-90" src="t.jpg" alt="Web Development" />
+        <div className="p-4 flex-1 flex flex-col justify-between">
+          <p className="text-xl font-bold mb-3">Web Development Basics</p>
+          <div className="text-sm text-gray-800 flex-1">
+            <p><i className="fa-solid fa-check text-black font-bold"></i> Learn HTML, CSS, JavaScript, and React fundamentals</p>
+            <p><i className="fa-solid fa-check text-black font-bold"></i> Build responsive and interactive web pages</p>
+            <p><i className="fa-solid fa-check text-black font-bold"></i> Create mini projects to practice real-world skills</p>
+          </div>
+          <Link className="text-black font-semibold flex justify-center items-center rounded-lg bg-gray-300 p-2 mt-2 hover:bg-gray-500 duration-300" href="detail">Learn More</Link>
+        </div>
       </div>
 
-      {/* 2nd */}
-      <div className="bg-white h-[340px] w-[300px] cursor-pointer rounded-2xl shadow-md resize-none opacity-90 duration-300 hover:opacity-100">
-        <img className="rounded-2xl h-[150px] rounded-b-md brightness-80 w-full object-cover" src="z.jpg" alt="" />
-        <p className="text-xl font-semibold mt-3 ml-4">Learn JAVA SCRIPT for begginers</p>
-     
-       <div className="text-sm text-gray-800 ml-4 mt-3">
- <p><i className="fa-solid fa-check text-black font-bold"></i> Learn JavaScript basics from scratch</p>
-         <p><i className="fa-solid fa-check text-black font-bold"></i> Learn variables, functions, and conditions</p>
-          <p><i className="fa-solid fa-check text-black font-bold"></i> Build simple and interactive projects</p>
-       </div>
-       <Link className="text-black font-semibold flex rounded-lg bg-gray-300 p-2 h-[40px] w-[100px] ml-47" href="" >Learn More</Link>
-       </div>
+      {/* 2nd Card - Graphic Designing */}
+      <div className="bg-white h-[380px] w-[300px] cursor-pointer opacity-90 duration-300 hover:opacity-100 rounded-2xl shadow-md flex flex-col">
+        <img className="rounded-t-2xl h-[150px] w-full object-cover brightness-90" src="tt.jpg" alt="Graphic Designing" />
+        <div className="p-4 flex-1 flex flex-col justify-between">
+          <p className="text-xl font-semibold mb-3">Graphic Designing</p>
+          <div className="text-sm text-gray-800 flex-1">
+            <p><i className="fa-solid fa-check text-black font-bold"></i> Master design principles, color theory, and typography</p>
+            <p><i className="fa-solid fa-check text-black font-bold"></i> Create logos, posters, and digital content</p>
+            <p><i className="fa-solid fa-check text-black font-bold"></i> Build a portfolio of professional-quality projects</p>
+          </div>
+          <Link className="text-black font-semibold flex justify-center items-center rounded-lg bg-gray-300 p-2 mt-2 hover:bg-gray-500 duration-300" href="detail2">Learn More</Link>
+        </div>
+      </div>
     </div>
 
     {/* LOWER SECTION */}
-    <div className="flex flex-row gap-20">
-      {/* 3rd */}
-      <div className="bg-white h-[340px] w-[300px] cursor-pointer rounded-2xl shadow-md resize-none opacity-90 duration-300 hover:opacity-100">
-        <img className="rounded-2xl h-[150px] rounded-b-md brightness-80 w-full object-cover" src="tt.jpg" alt="" />
-        <p className="text-xl font-semibold mt-3 ml-4">Learn Basics of Digital Marketing</p>
-        <div className="text-sm text-gray-800 ml-4 mt-3">
- <p><i className="fa-solid fa-check text-black font-bold"></i> Understand how online marketing works</p>
-         <p><i className="fa-solid fa-check text-black font-bold"></i> Learn SEO, and content marketing</p>
-          <p><i className="fa-solid fa-check text-black font-bold"></i> Promote products and services online</p>
-       </div>
-       <Link className="text-black font-semibold flex rounded-lg bg-gray-300 p-2 h-[40px] w-[100px] ml-47 duration-300 hover:bg-gray-600" href="" >Learn More</Link>
+    <div className="flex flex-row gap-10 flex-wrap justify-center">
+      {/* 3rd Card - Video Editing */}
+      <div className="bg-white h-[380px] w-[300px] cursor-pointer opacity-90 duration-300 hover:opacity-100 rounded-2xl shadow-md flex flex-col">
+        <img className="rounded-t-2xl h-[150px] w-full object-cover brightness-90" src="vid.jpg" alt="Video Editing" />
+        <div className="p-4 flex-1 flex flex-col justify-between">
+          <p className="text-xl font-semibold mb-3">Video Editing</p>
+          <div className="text-sm text-gray-800 flex-1">
+            <p><i className="fa-solid fa-check text-black font-bold"></i> Learn video cutting, trimming, and sequencing</p>
+            <p><i className="fa-solid fa-check text-black font-bold"></i> Add transitions, effects, text, and motion graphics</p>
+            <p><i className="fa-solid fa-check text-black font-bold"></i> Export and optimize videos for social media and web</p>
+          </div>
+          <Link className="text-black font-semibold flex justify-center items-center rounded-lg bg-gray-300 p-2 mt-2 hover:bg-gray-500 duration-300" href="detail3">Learn More</Link>
+        </div>
       </div>
 
-      {/* 4th */}
-      <div className="bg-white h-[340px] w-[300px] cursor-pointer rounded-2xl shadow-md resize-none opacity-90 duration-300 hover:opacity-100">
-        <img className="rounded-2xl h-[150px] rounded-b-md brightness-80 w-full object-cover" src="v.jpg" alt="" />
-  
-        <p className="text-xl font-semibold mt-3 ml-4">Learn Freelancing for Beginners</p>
-         <div className="text-sm text-gray-800 ml-4 mt-3">
- <p><i className="fa-solid fa-check text-black font-bold"></i> Start earning online with your skills</p>
-         <p><i className="fa-solid fa-check text-black font-bold"></i> Find clients and projects online</p>
-          <p><i className="fa-solid fa-check text-black font-bold"></i> No prior experience required</p>
-       </div>
-       <Link className="text-black font-semibold flex rounded-lg bg-gray-300 p-2 h-[40px] w-[100px] ml-47" href="" >Learn More</Link>
+      {/* 4th Card - Basic IT */}
+      <div className="bg-white h-[380px] w-[300px] cursor-pointer opacity-90 duration-300 hover:opacity-100 rounded-2xl shadow-md flex flex-col">
+        <img className="rounded-t-2xl h-[150px] w-full object-cover brightness-90" src="its.png" alt="Basic IT" />
+        <div className="p-4 flex-1 flex flex-col justify-between">
+          <p className="text-xl font-semibold mb-3">Basic IT</p>
+          <div className="text-sm text-gray-800 flex-1">
+            <p><i className="fa-solid fa-check text-black font-bold"></i> Understand computer fundamentals and operating systems</p>
+            <p><i className="fa-solid fa-check text-black font-bold"></i> Learn essential software like Word, Excel, and PowerPoint</p>
+            <p><i className="fa-solid fa-check text-black font-bold"></i> Gain confidence using internet, email, and basic troubleshooting</p>
+          </div>
+          <Link  className="text-black font-semibold flex justify-center items-center rounded-lg bg-gray-300 p-2 mt-3 hover:bg-gray-500 duration-300" href="detail4">Learn More</Link>
+        </div>
       </div>
     </div>
   </div>
-  </div>
+</div>
+
 
   <div className="h-[700px] font-serif mt-50 flex flex-row gap-20">
     <div className=" h-[500px] ml-20  w-[500px]">

@@ -1,66 +1,44 @@
-"use client";
-import { useRouter } from "next/navigation";
-import { EnrollJs } from "../actions/Enroll";
-import { useState } from "react";
+"use client"
+
+import { useState } from "react"
 
 
-
-export default function EnrollForm() {
+export default function SingleData({data}){
+  const [name,Setname] = useState("")
+  const [course,Setcourse] = useState("")
+  const [age,Setage] = useState("")
+  const [image,Setimage] = useState("")
+  const [message , Setmessage] = useState("")
   
-const[name,Setname] = useState("")
-const[age,Setage] = useState("")
-const[course,Setcourse] = useState("")
-const[image,Setimage] = useState("")
-const[message,Setmessage] = useState("")
-const router = useRouter()
-
-async function HandleSubmit(e){
+  async function HandleSubmit(e){
     e.preventDefault();
+
     if(!image){
-      Setmessage("select image file")
-    return;
+      Setmessage("Please select an image file")
+      return;
     }
     try {
-      const formData = new FormData();
-      formData.append("file", image);
-      formData.append("upload_preset", "lms456");
-      formData.append("cloud_name","da9ogj2r8");
+    const formData = new FormData();
+    formData.append("file",image)
+    formData.append("upload_preset", "lms456");
+    formData.append("cloud_name","da9ogj2r8");
 
-      const response = await fetch("https://api.cloudinary.com/v1_1/da9ogj2r8/image/upload",{
+    const response = await fetch("https://api.cloudinary.com/v1_1/da9ogj2r8/image/upload",
+      {
         method: "POST",
-        body: formData,
-      });
-      const result = await response.json();
-
-      if (!result.secure_url){
-        Setmessage("Error in image handling")
+        boby: formData,
       }
-    
-  const res = await EnrollJs({
-    name,
-    course,
-    age,
-    image: result.secure_url
-  });
-
-  Setmessage(res.error || res.success);
-   
-  if(course){
-    router.push("/dashboard")}
-   }  catch (error)  {
-    console.error(error)
-  }}
-  return (
-      
-    
-    <div className="min-h-screen flex items-center justify-center px-6 py-12">
-      <title>Join Us - Skill Verge</title>
-      <div className="max-w-5xl bg-gray-800 rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row w-full">
-        {/* Left Image Panel */}
-        <div
-          className="hidden md:block md:w-1/2 bg-cover bg-center  bg-[url('/vc.jpg')]"
-          
-        ></div>
+    )
+    Setmessage(res.error||res.success)
+    } catch (error) {
+      console.error("Something Went Wrong" , error);
+      Setmessage("Something went wrong . Please try again");
+    }
+  }
+    return(
+        <section>
+            <div className="max-w-5xl bg-gray-800 rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row w-full">
+       
 
         {/* Right Form Panel */}
         <div className="w-full md:w-1/2 bg-white p-10 flex flex-col justify-center">
@@ -98,7 +76,7 @@ async function HandleSubmit(e){
                 <option value="">Select your course</option>
                 <option value="Graphic Designing">Graphics Desigining</option>
                 <option value="Web Development">Web Development</option>
-                <option value="Basic IT">Basic It </option>
+                <option value="Basic IT">E-Commerce </option>
                 <option value="Video Editing">Video Editing</option>
 
             </select>
@@ -136,6 +114,6 @@ async function HandleSubmit(e){
           </form>
         </div>
       </div>
-    </div>
-  );
+        </section>
+    )
 }

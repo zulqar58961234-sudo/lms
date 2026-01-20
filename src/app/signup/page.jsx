@@ -132,7 +132,7 @@ export default function SignUpPage() {
                 ${loading ? "cursor-not-allowed" : "cursor-pointer"}
               `}
             >
-              {loading ? "Saving..." : "Create Account"}
+              {loading ? "creating account..." : "Create Account"}
             </button>
 
             {message && <p className="text-center text-black">{message}</p>}

@@ -11,6 +11,9 @@ export default async function ReadData() {
   }
 
   const data = await prisma.studentinfo.findMany({
+    where: {
+      userId: session.id,
+    },
     include: {
       user: {
         select: {

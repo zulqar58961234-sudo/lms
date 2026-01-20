@@ -18,13 +18,13 @@ export default function JoinCommunity() {
         the world. Get access to courses, live sessions, and exclusive resources.
       </p>
 
-      <button className="mt-6 bg-red-500 font-bold text-white px-8 py-3 rounded-xl hover:bg-yellow-600 duration-300 shadow-xl">
-        Join Now
+      <button href="join" className="mt-6 bg-red-500 font-bold text-white px-8 py-3 rounded-xl hover:bg-yellow-600 duration-300 shadow-xl">
+        Enroll Now
       </button>
 
       <div className="mt-6 flex gap-8">
         <div>
-          <h3 className="text-3xl font-bold text-red-600">1K+</h3>
+          <h3 className="text-3xl font-bold text-red-600">100K+</h3>
           <p className="text-gray-600">Members</p>
         </div>
 

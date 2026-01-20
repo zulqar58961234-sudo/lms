@@ -7,7 +7,7 @@ import Footer from "../components/footer";
 export default function CourseDetails() {
   return (
 <section className="h-full w-full overflow-x-hidden scroll-smooth">
-<title>Web Development - Skill Verge</title>   
+<title>Vedio Editing Course - Skill Verge</title>   
                          {/* HEADER*/} 
 <div>
     <NavBar/>
@@ -16,8 +16,8 @@ export default function CourseDetails() {
     <div className="absolute inset-0 bg-black/70"></div>
      <ParticlesBackground/>
       <div className="relative z-10 text-white">
-       <h1 className="text-5xl font-bold">* Web Development *</h1>
-        <p className="mt-2 text-sm"><Link href="/home">Home</Link> / Courses </p>
+       <h1 className="text-5xl font-bold">* Video Editing *</h1>
+        <p className="mt-2 text-sm"><Link href="/home">Home</Link> / Courses</p>
          </div>
           </div>
            </div>
@@ -30,37 +30,32 @@ export default function CourseDetails() {
           <FaStar />
           <FaStar />
           <FaStar />
-          <FaStar className="text-gray-300" />
+          <FaStar />
         </div>
-        <span className="font-semibold">4.67</span>
-        <span className="text-sm text-gray-500">(3)</span>
+        <span className="font-semibold">5.00</span>
+        <span className="text-sm text-gray-500">(5)</span>
       </div>
 
       {/* Title */}
       <h1 className="text-3xl font-bold mb-2">
-        Web development advance course
+       Video Editing Advance Course
       </h1>
 
       {/* Short Description */}
       <p className="text-gray-600 max-w-3xl mb-6">
-       “This advanced course focuses on building modern,
-        scalable web applications using the latest front-end
-         and back-end technologies. It covers advanced JavaScript
-          concepts, frameworks, APIs, performance optimization,
-           security, and real-world project development to prepare learners
-            for professional web development roles.”
+       "Learn how to transform raw footage into engaging videos using modern editing tools and techniques. This course teaches cutting, trimming, transitions, effects, and basic motion graphics to create professional-quality content for social media, YouTube, or personal projects."
       </p>
 
       {/* Instructor Section */}
       <div className="flex items-center gap-3 mb-8 mt-5">
         <img
-          src="/r.jpg"
+          src="/mmm.jpg"
           alt="Instructor"
           className="w-10 h-10 rounded-full object-cover"
         />
         <div>
           <p className="text-gray-800 font-semibold">Instructor</p>
-          <p className="text-gray-600">Ellie Clark</p>
+          <p className="text-gray-600">Caroline</p>
         </div>
       </div>
 
@@ -69,7 +64,7 @@ export default function CourseDetails() {
 
       {/* Update Section */}
       <p className="text-gray-800 font-semibold">Update</p>
-      <p className="text-gray-500">December 6, 2025</p>
+      <p className="text-gray-500">November 6, 2025</p>
 
       <hr className="border-gray-300 mt-4" />
     </div>
@@ -81,43 +76,45 @@ export default function CourseDetails() {
         <h2 className="text-2xl font-bold mb-3">Description</h2>
 
         <p className="text-gray-600 leading-relaxed mb-4">
-        This comprehensive web development course is designed to take learners from foundational concepts to advanced application development. The program explores how websites and web applications are planned, designed, built, and maintained using modern tools and best practices. Students will gain hands-on experience with both client-side and server-side development, learning how to create responsive layouts, interactive user interfaces, and reliable back-end systems.
-
-The course covers core technologies such as HTML, CSS, and JavaScript, along with popular frameworks and libraries used in today’s industry. Learners will also work with databases, version control systems, and deployment techniques to understand the full development lifecycle. Special attention is given to clean code practices, performance optimization, accessibility, and web security to ensure professional-quality results.
+       "This comprehensive Video Editing course is designed to equip learners with the skills needed to produce professional and visually appealing videos. Students will gain hands-on experience with popular video editing software, learning techniques for cutting, trimming, adding transitions, color correction, audio editing, and motion graphics."
         </p>
 
         <p className="text-gray-600 leading-relaxed mb-8">
-         By the end of the course, students will have built multiple real-world projects, developed problem-solving skills, and gained the confidence to design, develop, and deploy complete web solutions. This course is ideal for aspiring developers, freelancers, and professionals looking to strengthen their web development expertise and stay current with evolving web technologies.
+      The course also covers storytelling principles, pacing, and visual effects to ensure that videos not only look polished but also effectively communicate the intended message. Learners will work on real-world projects, including promotional videos, social media content, and personal creative projects, building a strong portfolio along the way.
+
+By the end of the course, students will have the technical knowledge and creative confidence to edit videos for personal, professional, or commercial purposes, making them ready for careers in media, marketing, content creation, or freelance video editing.
         </p>
 
         <h2 className="text-2xl font-bold mb-3">What Will I Learn?</h2>
 
-        <ul className="space-y-3 text-gray-700">
-          <li className="flex items-start gap-2">
-           ✔ Understand how the web works, including browsers, servers, and hosting
-          </li>
-          <li className="flex items-start gap-2">
-         ✔ Learn HTML, CSS, and JavaScript to build modern, responsive websites
-          </li>
-          <li className="flex items-start gap-2">
-           ✔ Design visually appealing layouts using CSS, Flexbox, and Grid
-          </li>
-          <li className="flex items-start gap-2">
-           ✔ Create interactive and dynamic web pages using JavaScript
-          </li>
-          <li className="flex items-start gap-2">
-            ✔ Build responsive websites that work on mobile, tablet, and desktop
-          </li>
-          <li className="flex items-start gap-2">
-✔ Learn front-end frameworks and libraries for faster development
-          </li>
-           <li className="flex items-start gap-2">
-✔ Develop back-end functionality and connect websites to databases
-          </li>
-           <li className="flex items-start gap-2">
-✔ Understand APIs and how to integrate third-party services
-          </li>
-        </ul>
+      <ul className="space-y-3 text-gray-700">
+  <li className="flex items-start gap-2">
+    ✔ Understand the basics of video editing and its role in storytelling
+  </li>
+  <li className="flex items-start gap-2">
+    ✔ Learn to use popular video editing software and tools
+  </li>
+  <li className="flex items-start gap-2">
+    ✔ Cut, trim, and arrange clips to create smooth video sequences
+  </li>
+  <li className="flex items-start gap-2">
+    ✔ Add transitions, effects, and text overlays for professional results
+  </li>
+  <li className="flex items-start gap-2">
+    ✔ Perform color correction and audio editing to enhance video quality
+  </li>
+  <li className="flex items-start gap-2">
+    ✔ Create motion graphics and visual effects to make videos engaging
+  </li>
+  <li className="flex items-start gap-2">
+    ✔ Learn video exporting, formatting, and optimization for different platforms
+  </li>
+  <li className="flex items-start gap-2">
+    ✔ Work on real-world projects to build a professional video portfolio
+  </li>
+</ul>
+
+
       </div>
 
       {/* RIGHT SECTION – CARD */}
@@ -126,7 +123,7 @@ The course covers core technologies such as HTML, CSS, and JavaScript, along wit
           
           {/* Image */}
           <img
-            src="bn.jpg"
+            src="video.webp"
             alt="Course"
             className="rounded-lg w-full mb-4"
           />
@@ -139,7 +136,7 @@ The course covers core technologies such as HTML, CSS, and JavaScript, along wit
 
             <p className="flex justify-between">
               <span className="flex items-center gap-2"><FaUser /> Instructor</span>
-              <span>Ellie Clark</span>
+              <span>Caroline</span>
             </p>
 
             <p className="flex justify-between">
@@ -149,12 +146,12 @@ The course covers core technologies such as HTML, CSS, and JavaScript, along wit
 
             <p className="flex justify-between">
               <span className="flex items-center gap-2"><FaClock /> Duration</span>
-              <span>03h 12m 30s</span>
+              <span>09h 20m 30s</span>
             </p>
 
             <p className="flex justify-between">
               <span className="flex items-center gap-2"><FaUsers /> Enrolled</span>
-              <span>80</span>
+              <span>30</span>
             </p>
 
             <p className="flex justify-between">

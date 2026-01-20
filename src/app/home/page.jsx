@@ -168,8 +168,8 @@ if(!session?.id)
           <img className="h-[60px] w-[60px] rounded-full object-cover mt-3 ml-2 duration-300 hover:brightness-70" src="r.jpg" alt="" />
           <p className="mt-8 text-sm ml-3 font-semibold">Ellie Clark</p>
         </div>
-        <p className="text-xl font-semibold  ml-4">Basis Of HTML For begginers</p>
-        <div className="mt-10 ml-5 flex font-semibold">
+        <p className="text-xl font-semibold  ml-4">Web Development Advance Course</p>
+        <div className="mt-4 ml-5 flex font-semibold">
           <div className="flex flex-row gap-2 items-center">
             <i className="fa-solid fa-user"></i>
             <p>80</p>
@@ -184,22 +184,22 @@ if(!session?.id)
 
       {/* 2nd */}
       <div className="bg-white h-[340px] w-[300px] cursor-pointer rounded-2xl shadow-md resize-none opacity-90 duration-300 hover:opacity-100">
-        <img className="rounded-2xl h-[150px] rounded-b-md brightness-80 w-full object-cover" src="z.jpg" alt="" />
+        <img className="rounded-2xl h-[150px] rounded-b-md brightness-80 w-full object-cover" src="tt.jpg" alt="" />
         <div className="flex flex-row">
           <img className="h-[60px] w-[60px] rounded-full object-cover mt-3 ml-2 duration-300 hover:brightness-70" src="bbb.jpg" alt="" />
           <p className="mt-8 text-sm ml-3 font-semibold">James Hunt</p>
         </div>
-        <p className="text-xl font-semibold ml-2">Learn Java Script for <span className="ml-3">begginers</span></p>
-        <div className="mt-3 ml-5 flex font-semibold">
+        <p className="text-xl font-semibold ml-2">Graphic Desigining Full Course</p>
+        <div className="mt-11 ml-5 flex font-semibold">
           <div className="flex flex-row gap-2 items-center">
             <i className="fa-solid fa-user"></i>
-            <p>48</p>
+            <p>13</p>
           </div>
           <div className="flex flex-row gap-2 ml-5 items-center">
             <i className="fa-regular fa-star"></i>
-            <p>3</p>
+            <p>3.59</p>
           </div>
-          <Link href="detail2" className="ml-20 bg-red-600 hover:bg-gray-600 duration-400 rounded-lg px-5 py-2 text-white">Explore</Link> 
+          <Link href="detail2" className="ml-14 bg-red-600 hover:bg-gray-600 duration-400 rounded-lg px-5 py-2 text-white">Explore</Link> 
         </div>
       </div>
     </div>
@@ -208,43 +208,43 @@ if(!session?.id)
     <div className="flex flex-row gap-20">
       {/* 3rd */}
       <div className="bg-white h-[340px] w-[300px] cursor-pointer rounded-2xl shadow-md resize-none opacity-90 duration-300 hover:opacity-100">
-        <img className="rounded-2xl h-[150px] rounded-b-md brightness-80 w-full object-cover" src="tt.jpg" alt="" />
+        <img className="rounded-2xl h-[150px] rounded-b-md brightness-80 w-full object-cover" src="its.png" alt="" />
         <div className="flex flex-row">
           <img className="h-[60px] w-[60px] rounded-full object-cover mt-3 ml-2 duration-300 hover:brightness-70" src="bb.jpg" alt="" />
           <p className="mt-8 text-sm ml-3 font-semibold">Micheal</p>
         </div>
-        <p className="text-xl font-semibold ml-4 hover:text-red-600 duration-500">Learn HTML for begginers</p>
+        <p className="text-xl font-semibold ml-4 hover:text-red-600 duration-500">Basic IT Full Course</p>
         <div className="mt-10 ml-5 flex font-semibold">
           <div className="flex flex-row gap-2 items-center">
             <i className="fa-solid fa-user"></i>
-            <p>48</p>
+            <p>18</p>
           </div>
           <div className="flex flex-row gap-2 ml-5 items-center">
             <i className="fa-regular fa-star"></i>
-            <p>3</p>
+            <p>2.85</p>
           </div>
-          <Link href="detail3" className="ml-20 bg-red-600 hover:bg-gray-600 duration-400 rounded-lg px-5 py-2 text-white">Explore</Link>
+          <Link href="detail3" className="ml-14 bg-red-600 hover:bg-gray-600 duration-400 rounded-lg px-5 py-2 text-white">Explore</Link>
         </div>
       </div>
 
       {/* 4th */}
       <div className="bg-white h-[340px] w-[300px] cursor-pointer rounded-2xl shadow-md resize-none opacity-90 duration-300 hover:opacity-100">
-        <img className="rounded-2xl h-[150px] rounded-b-md brightness-80 w-full object-cover" src="v.jpg" alt="" />
+        <img className="rounded-2xl h-[150px] rounded-b-md brightness-80 w-full object-cover" src="vid.jpg" alt="" />
         <div className="flex flex-row">
-          <img className="h-[60px] w-[60px] rounded-full object-cover ml-2 duration-300 hover:brightness-70" src="mmm.jpg" alt="" />
+          <img className="h-[60px] w-[60px] rounded-full object-cover mt-3 ml-2 duration-300 hover:brightness-70" src="mmm.jpg" alt="" />
           <p className="mt-8 text-sm ml-3 font-semibold">Caroline</p>
         </div>
-        <p className="text-xl font-semibold mt-3 ml-4 hover:text-red-600 duration-500">Learn HTML for begginers</p>
-        <div className="mt-10 ml-5 flex font-semibold">
+        <p className="text-xl font-semibold mt-3 ml-4 hover:text-red-600 duration-500">Advance Video Editing Course</p>
+        <div className="mt-8 ml-5 flex font-semibold">
           <div className="flex flex-row gap-2 items-center">
             <i className="fa-solid fa-user"></i>
-            <p>48</p>
+            <p>30</p>
           </div>
           <div className="flex flex-row gap-2 ml-5 items-center">
             <i className="fa-regular fa-star"></i>
-            <p>3</p>
+            <p>5.00</p>
           </div>
-         <Link href="" className="ml-20 bg-red-600 hover:bg-gray-600 duration-400 rounded-lg px-5 py-2 text-white">Explore</Link>
+         <Link href="detail4" className="ml-14 bg-red-600 hover:bg-gray-600 duration-400 rounded-lg px-5 py-2 text-white">Explore</Link>
         </div>
       </div>
     </div>
